@@ -1,0 +1,93 @@
+@import typography
+@import SectionTitle
+@import button
+@import colors
+@import tooltag
+@import grid
+@import SectionFeatures
+@import SectionProcess
+@import SectionCurriculum
+@import header
+@import SectionEnroll
+@import Footer
+
+section
+    display: flex
+    flex-direction: column
+    margin: $grid15 0
+    gap: $grid15
+
+.section--inner
+    display: flex
+    flex-direction: column
+    gap: $grid8
+
+.no--margin
+    margin: 0
+
+.section--title
+    display: flex
+    flex-direction: column
+    gap: $grid4
+
+.App
+    max-width: 1440px
+    margin: 0 auto
+    padding: 0 60px
+
+    @media (max-width: $mobile)
+        padding: 0 20px
+
+.hidden 
+    dispay: none 
+
+div
+    box-sizing: border-box
+
+.grid
+    display: grid
+
+.flex
+    display: flex
+
+    &--column
+        flex-direction: column
+
+    &--list
+        align-items: center
+        flex-wrap: wrap
+
+    &--grid
+        display: flex
+        
+        .col
+            flex: 1
+
+    &--wrap
+        flex-wrap: wrap
+
+.gap--8
+    gap: $grid1
+
+.gap--16
+    gap: $grid2
+
+.gap--32
+    gap: $grid4
+
+
+.text--inverted
+    color: $label--inverted
+
+
+@media (max-width: $mobile)
+    .grid
+        display: flex
+        flex-direction: column
+
+    .flex--grid
+        flex-direction: column
+
+    .schedule .flex--grid
+        height: auto
+

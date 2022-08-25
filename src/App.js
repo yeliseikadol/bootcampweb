@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './sass/style.sass';
+import SectionTitle from './components/SectionTitle';
+import SectionLead from './components/SectionLead';
+import SectionFeatures from './components/SectionFeatures';
+import SectionProcess from './components/SectionProcess';
+import SectionCurriculum from './components/SectionCurriculum';
+import SectionResult from './components/SectionResult';
+import SectionTutors from './components/SectionTutors';
+import SectionEnroll from './components/SectionEnroll';
+import Header from './components/Header';
+import SectionFaq from './components/SectionFaq';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <SectionTitle/>
+      <SectionLead/>
+      <SectionFeatures/>
+      <SectionProcess/>
+      <SectionCurriculum/>
+      <SectionResult/>
+      <SectionTutors/>
+      <SectionEnroll/>
+      <SectionFaq/>
+      <Footer/>
     </div>
   );
 }

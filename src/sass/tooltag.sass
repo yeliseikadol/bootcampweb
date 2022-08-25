@@ -1,0 +1,26 @@
+@import typography
+@import grid
+@import colors
+
+.tooltag 
+    display: flex
+    gap: $grid1
+    padding: 0px $grid2
+    height: $grid6
+    background: $accent--bg
+    align-items: center
+    border-radius: $grid1
+
+    @media (max-width: $mobile)
+        padding: 0px 12px
+
+.tooltag--icon
+    width: $grid4
+    height: $grid4
+
+    @media (max-width: $mobile)
+        width: $grid3
+        height: $grid3
+
+.tooltag--name
+    @extend %body

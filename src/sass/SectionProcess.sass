@@ -1,0 +1,67 @@
+@import grid
+@import colors
+
+.process--books
+    display: flex
+    flex-direction: column
+    background: $accent--bg
+    padding: $grid8
+    border-radius: $grid4
+    gap: $grid4
+    position: relative
+
+    h2
+        color: $label--primary
+    
+
+.process--books--img
+    position: absolute
+    bottom: 0
+    right: 0
+    
+    .factoid
+        position: absolute
+        bottom: $grid4
+        right: $grid4
+        background: $bg--accent
+        padding: $grid2
+        border-radius: $grid2
+    
+        .caption
+            text-align: center
+            color: $label--inverted
+
+
+.schedule .flex--grid
+    height: 544px
+
+.schedule .col
+    display: flex
+    flex-direction: column
+    gap: $grid2
+
+.lesson
+    display: flex
+    flex-direction: column
+    padding: $grid2
+    border-radius: $grid2
+    justify-content: space-between
+
+
+    &--live
+        background-color: $accent--bg
+
+    &--group
+        background-color: $bg--onPrimary
+
+    &--duedate
+        background-color: $status--error--bg
+
+    &--weekdays
+        background-color: $bg--onPrimary
+
+    &--1hour
+        height: calc( 50% - 16px )
+        
+    &--2hours
+        height: 100%

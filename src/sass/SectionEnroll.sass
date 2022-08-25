@@ -1,0 +1,31 @@
+@import colors
+@import grid
+
+.section--enroll
+    background: $bg--inverted
+    border-radius: $grid8
+    padding: $grid8
+
+.accent--inverted
+    color: $accent--label--inverted
+
+.enroll--form
+    background: $bg--primary
+    padding: $grid6
+    border-radius: $grid6
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+.enroll--form--title
+    color: $label--primary
+
+.price--old
+    text-decoration: line-through
+
+.price--new
+    @extend %h2
+    color: $status--error--text
+
+.price--alert
+    color: $status--error--text

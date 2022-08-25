@@ -1,0 +1,42 @@
+@import grid
+@import colors
+    
+.section--features
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-areas: "feature--1 feature--1 feature--2 feature--2 feature--2 feature--2" "feature--3 feature--3 feature--3 feature--4 feature--4 feature--4" "feature--5 feature--5 feature--5 feature--5 feature--5 feature--5" "feature--6 feature--6 feature--7 feature--7 feature--7 feature--7"
+    gap: $grid4
+
+.feature--block
+    height: 544px
+    background: $accent--bg
+    border-radius: $grid2
+    padding: $grid4
+    display: flex
+    align-items: flex-end
+
+    h2
+        color: $label--primary
+
+.feature--1 
+    grid-area: feature--1
+    align-items: center
+    padding: $grid8
+
+.feature--2
+    grid-area: feature--2
+
+.feature--3
+    grid-area: feature--3
+
+.feature--4
+    grid-area: feature--4
+
+.feature--5
+    grid-area: feature--5
+
+.feature--6
+    grid-area: feature--6
+
+.feature--7
+    grid-area: feature--7
