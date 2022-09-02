@@ -2,12 +2,12 @@
     
 @font-face 
     font-family: 'tt-wellingtons'
-    src: url(../fonts/TTWellingtonsMedium/font.woff2)
+    src: url(../../fonts/TTWellingtonsMedium/font.woff2)
     font-weight: normal
 
 @font-face 
     font-family: 'tt-wellingtons'
-    src: url(../fonts/TTWellingtonsDemiBold/font.woff2)
+    src: url(../../fonts/TTWellingtonsDemiBold/font.woff2)
     font-weight: bold
 
 *
@@ -16,15 +16,15 @@
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     font-feature-settings: 'lnum', 'ss01'
-    color: $label--primary
+    color: $label-primary
 
 h1, %h1, .h1
     font-size: 50px
     line-height: 64px
     letter-spacing: -1px
-    font-weight: normal
+    font-weight: bold
     margin: 0
-    color: $accent--label
+    color: $accent-label
 
     @media (max-width: 1000px)
         font-size: 40px
@@ -35,9 +35,9 @@ h2, %h2, .h2
     font-size: 50px
     line-height: 64px
     letter-spacing: -1px
-    font-weight: normal
+    font-weight: bold
     margin: 0
-    color: $accent--label
+    color: $accent-label
 
     @media (max-width: 1000px)
         font-size: 40px
@@ -48,7 +48,7 @@ h3, %h3, .h3
     font-size: 32px
     line-height: 48px
     letter-spacing: 0
-    font-weight: normal
+    font-weight: bold
     margin: 0
 
     @media (max-width: 1000px)
@@ -59,7 +59,7 @@ h4, %h4, .h4
     font-size: 23px
     line-height: 32px
     letter-spacing: 0
-    font-weight: normal
+    font-weight: bold
     margin: 0
 
     @media (max-width: 1000px)
@@ -67,7 +67,7 @@ h4, %h4, .h4
         line-height: 24px
 
 
-body, %body
+body, %body, .text--body
     font-size: 23px
     line-height: 32px
     letter-spacing: 0
@@ -77,6 +77,14 @@ body, %body
     @media (max-width: 1000px)
         font-size: 17px
         line-height: 24px
+
+
+.text--small
+    font-size: 16px
+    line-height: 24px
+
+.text--bold
+    font-weight: bold
 
 p
     margin: 0
@@ -104,6 +112,6 @@ code, .code, %code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
 a
-    color: $accent--label
-    border-bottom: 0.5px solid $accent--label
+    color: $accent-label
+    border-bottom: 0.5px solid $accent-label
     text-decoration: none

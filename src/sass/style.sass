@@ -16,6 +16,16 @@ section
     flex-direction: column
     margin: $grid15 0
     gap: $grid15
+    max-width: 1440px
+    margin: 0 auto
+    padding: 0 60px
+    box-sizing: border-box
+
+    @media (max-width: $mobile)
+        padding: 0 20px
+
+.text--primary
+    color: $label--primary
 
 .section--inner
     display: flex
@@ -23,23 +33,17 @@ section
     gap: $grid8
 
 .no--margin
-    margin: 0
+    margin: 0 auto
 
 .section--title
     display: flex
     flex-direction: column
     gap: $grid4
 
-.App
-    max-width: 1440px
-    margin: 0 auto
-    padding: 0 60px
-
-    @media (max-width: $mobile)
-        padding: 0 20px
+    
 
 .hidden 
-    dispay: none 
+    display: none 
 
 div
     box-sizing: border-box
@@ -74,6 +78,9 @@ div
 
 .gap--32
     gap: $grid4
+
+.gap--64
+    gap: 64px
 
 
 .text--inverted

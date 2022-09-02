@@ -1,11 +1,11 @@
 import React from 'react'
-import PhoneNumber from './PhoneNumber'
+import PhoneNumber from '../PhoneNumber'
 
-export default function Footer() {
+export default function SkFooter() {
   return (
     <footer>
         <h2>bootcamp.by</h2>
-        <div className="flex--grid gap--32">
+        <div className="cols">
             <div className="col">
                 <div><a href="mailto:school@bootcamp.by">school@bootcamp.by</a></div>
                 <div><PhoneNumber/></div>

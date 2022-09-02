@@ -1,27 +1,59 @@
 @import grid
 @import colors
     
-.section--features
+.section--features .grid
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
-    grid-template-areas: "feature--1 feature--1 feature--2 feature--2 feature--2 feature--2" "feature--3 feature--3 feature--3 feature--4 feature--4 feature--4" "feature--5 feature--5 feature--5 feature--5 feature--5 feature--5" "feature--6 feature--6 feature--7 feature--7 feature--7 feature--7"
+    grid-template-areas: "feature--2 feature--2 feature--2 feature--2 feature--1 feature--1" "feature--3 feature--3 feature--3 feature--4 feature--4 feature--4" "feature--5 feature--5 feature--5 feature--5 feature--5 feature--5" "feature--6 feature--6 feature--7 feature--7 feature--7 feature--7"
     gap: $grid4
 
 .feature--block
+    display: flex
     height: 544px
-    background: $accent--bg
+    perspective: 600px
+    //background: $accent--bg
+    //border-radius: $grid2
+    //padding: $grid4
+    //display: flex
+    //align-items: flex-end
+    h2
+        color: $label--primary
+
+.feature--1 .card--face
+    align-items: center
+    padding: $grid8
+
+.card
+    width: 100%
+    height: 100%
+    position: relative
+    transition: transform 330ms
+    transform-style: preserve-3d
+
+
+.card--face
+    position: absolute
+    height: 100%
+    width: 100%
+    backface-visibility: hidden
+    background: $bg--onPrimary
     border-radius: $grid2
     padding: $grid4
     display: flex
     align-items: flex-end
+    height: 544px
 
-    h2
-        color: $label--primary
+.card--face--back
+    transform: rotateY( 180deg )
+    background: $bg--onPrimary
+
+.card.is-flipped
+    transform: rotateY(180deg)
+
+
 
 .feature--1 
     grid-area: feature--1
-    align-items: center
-    padding: $grid8
 
 .feature--2
     grid-area: feature--2
@@ -40,3 +72,31 @@
 
 .feature--7
     grid-area: feature--7
+
+
+
+.feature--2 .card--face--front
+    display: flex
+    flex-direction: column
+    padding: 0
+    justify-content: space-between
+    align-items: flex-start
+    gap: 16px
+
+.feature--2 h4
+    padding-top: 32px
+    padding-left: 32px
+
+.card--image
+    width: 100%
+    font-size: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.features--image--practice
+    width: 100%
+    height: 464px
+    max-width: 718px
+    background-image: url('../assets/images/features_practice-2-time-week@2x.jpg')
+    background-size: cover

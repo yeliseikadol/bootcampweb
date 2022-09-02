@@ -1,0 +1,378 @@
+@import colors
+@import typography
+
+//max-width
+
+.content-section, .header, footer
+    max-width: 100%
+ 
+.content-section > *, .header > *, footer > *
+    width: 100%
+    max-width: 1320px
+    margin: 0 auto
+
+//blocks
+*
+    box-sizing: border-box
+
+.row
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    @media screen and (max-width: 1000px)
+        flex-direction: column
+
+.stack
+    display: flex
+    flex-direction: column
+
+
+.content-section
+    @extend .stack
+    padding: 64px 60px
+    gap: 64px
+
+    @media screen and (max-width: 1000px)
+        padding: 32px 20px
+        gap: 32px
+
+.section-header
+    @extend .stack
+    gap: 32px
+    @media screen and (max-width: 1000px)
+        gap: 16px
+
+footer
+    @extend .stack
+    padding: 64px 60px
+    gap: 64px
+    @media screen and (max-width: 1000px)
+        gap: 32px
+        padding: 32px 20px
+
+
+.add-top 
+    padding-top: 128px
+
+.add-bottom
+    padding-bottom: 128px
+
+
+
+.cols
+    display: flex
+    flex: 1
+    flex-wrap: nowrap
+    gap: 32px
+    @media screen and (max-width: 1000px)
+        flex-direction: column
+
+.cols > *
+    flex: 1
+
+.cols-2-1 > .col:first-child
+    flex-grow: 2
+
+.cols-2-1 > .col:last-child
+    flex-grow: 1
+
+.cols-1-2 > .col:first-child
+    flex-grow: 1
+
+.cols-1-2 > .col:last-child
+    flex-grow: 2
+
+img + .caption
+    margin-top: 32px
+
+
+.process-section
+    background: $accent-light
+
+//link
+a:hover
+    border-bottom: none
+    color: $accent-hover
+
+//Button
+button
+    padding: 24px 48px
+    border-radius: 8px
+    background: $text
+    border: none
+    color: $text-inverted
+
+
+//header
+.header
+    padding: 24px 60px
+
+.header .row
+    justify-content: space-between
+
+//button-bar
+.button-bar
+    gap: 32px
+    align-items: center
+
+
+//SkTag
+.tag
+    @extend .row
+    align-items: center
+
+.tag-rows-stack
+    @extend .stack
+    gap: 16px
+
+.tag-row
+    @extend .row
+
+    .tag
+        margin-right: 8px
+
+.tag-outlined:first-child:before
+    display: none
+
+.tag-outlined:before
+    content:''
+    display: block
+    width: 10px
+    height: 10px
+    background-color: $accent
+    margin-right: 8px
+    border-radius: 5px
+
+.tag-filled
+    padding: 0 16px
+    height: 48px
+    gap: 12px
+    background: $accent-light
+    border-radius: 6px
+
+
+
+
+
+
+
+
+
+
+
+//CARDS
+
+.cards-grid
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+.cards-row
+    display: flex
+    flex-direction: row
+    gap: 32px
+
+.cards-row > *
+    flex: 1
+
+.card
+    background: $background-darker
+    padding: 32px
+    height: 576px
+    border-radius: 32px
+    @extend h4
+
+
+.card-2-1
+    flex-basis: 860px
+
+.card-1-2 
+    flex-basis: 428px
+
+
+.features
+    .card
+        background-size: contain
+        background-position-y: 100%
+        background-repeat: no-repeat
+
+    .feature-1
+        background-image: url('../../assets/images/features1.png')
+
+    .feature-2
+        background-image: url('../../assets/images/features2.png')
+
+    .feature-3
+        background-image: url('../../assets/images/features3.png')
+
+    .feature-4
+        background-image: url('../../assets/images/features4.png')
+
+    .feature-5
+        background-image: url('../../assets/images/features5.png')
+
+    .feature-6
+        background-image: url('../../assets/images/features6.png')
+
+    .feature-7
+        background-color: $text
+        color: $text-inverted
+        background-image: url('../../assets/images/features7.png')
+
+    .feature-8
+        background-image: url('../../assets/images/features8.png')
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    .features
+        .feature-1
+            background-image: url('../../assets/images/features1@2x.png')
+        .feature-2
+            background-image: url('../../assets/images/features2@2x.png')
+        .feature-3
+            background-image: url('../../assets/images/features3@2x.png')
+        .feature-4
+            background-image: url('../../assets/images/features4@2x.png')
+        .feature-5
+            background-image: url('../../assets/images/features5@2x.png')
+        .feature-6
+            background-image: url('../../assets/images/features6@2x.png')
+        .feature-7
+            background-image: url('../../assets/images/features7@2x.png')
+        .feature-8
+            background-image: url('../../assets/images/features8@2x.png')
+
+
+
+
+
+
+
+
+
+
+//process
+
+.process-section:first-child
+    padding-top: 128px
+
+.process-1
+    background-position: 50% 100%
+    background-repeat: no-repeat
+    background-size: contain
+    width: 100%
+    background-image: url('../../assets/images/process1.png')
+    aspect-ratio: 1320 / 890
+
+.process-2
+    background-position: 50% 100%
+    background-repeat: no-repeat
+    background-size: contain
+    width: 100%
+    background-image: url('../../assets/images/process2.png')
+    aspect-ratio: 1320 / 696
+
+.process-3
+    background-position: 50% 100%
+    background-repeat: no-repeat
+    background-size: contain
+    width: 100%
+    background-image: url('../../assets/images/process3.png')
+    aspect-ratio: 1320 / 736
+
+.process-4
+    background-position: 50% 100%
+    background-repeat: no-repeat
+    background-size: contain
+    width: 100%
+    background-image: url('../../assets/images/process4.png')
+    aspect-ratio: 1320 / 1469
+
+//books
+
+.process-books > .row
+    gap: 32px
+    border-radius: 32px
+    padding-left: 48px
+    background: $background
+
+.process-books .books-text
+    padding: 64px 0
+    flex: 1
+
+.process-books .books-img
+    margin-top: auto
+    margin-left: auto
+    flex: 1
+    flex-basis: 440px
+
+.books-img
+    background-image: url(../../assets/images/imageProcessBooks.png)
+    @media screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+        background-image: url(../../assets/images/imageProcessBooks@2x.png)
+    background-repeat: no-repeat
+    background-position: 50% 100%
+    width: 100%
+    background-size: contain
+    aspect-ratio: 440 / 384
+    max-width: 440px
+
+.process-books h2
+    color: $text
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    .process-1
+        background-image: url('../../assets/images/process1@2x.png')
+    .process-2
+        background-image: url('../../assets/images/process2@2x.png')
+    .process-3
+        background-image: url('../../assets/images/process3@2x.png')
+    .process-4
+        background-image: url('../../assets/images/process4@2x.png')
+
+.schedule-img
+    background-image: url(../../assets/images/schedule.png)
+    @media screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+        background-image: url(../../assets/images/schedule@2x.png)
+    background-repeat: no-repeat
+    background-position: 50% 100%
+    width: 100%
+    background-size: contain
+    aspect-ratio: 1320 / 576
+
+
+.curruculum-rows
+    display: flex
+    flex-direction: column
+    gap: 64px
+
+.curriculum-row
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    gap: 64px
+
+.curriculum-week
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+
+
+
+@media screen and (max-width: 1000px)
+    .cards-row
+        display: block
+    .cards-row > * + *
+        margin-top: 32px
+    .card
+        height: auto
+        width: 100%
+        aspect-ratio: 1
+    .curruculum-rows
+        gap: 64px
+    .curriculum-row
+        flex-direction: column
+        gap: 64px
